@@ -1,0 +1,40 @@
+C51 COMPILER V9.59.0.0   TESTMOTOR2                                                        05/14/2025 16:29:03 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE TESTMOTOR2
+OBJECT MODULE PLACED IN .\Objects\testmotor2.obj
+COMPILER INVOKED BY: D:\keil 5\C51\BIN\C51.EXE testmotor2.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\testmotor2.lst) TABS(2) OBJECT(.\Objects\testmotor2.obj)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          
+   3          sbit l_bmo1 = P1^4;//IN1=1,IN2=0  FORWARD
+   4          sbit l_bmo2 = P1^5;
+   5          sbit r_bmo1 = P1^6;//IN3=0,IN4=1  FORWARD
+   6          sbit r_bmo2 = P1^7;
+   7          
+   8          int main()
+   9          {
+  10   1        while(1){
+  11   2          l_bmo1 = 1;
+  12   2          l_bmo2 = 0;
+  13   2          r_bmo1 = 0;
+  14   2          r_bmo2 = 1;
+  15   2        }
+  16   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     10    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
