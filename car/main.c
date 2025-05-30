@@ -69,7 +69,7 @@ void gensuiMode()
 		}
 }
 
-void bizhangMode()
+/*void bizhangMode()
 {
 	if(dir != MIDDLE){
 			sgMiddle();
@@ -113,7 +113,7 @@ void bizhangMode()
 			}
 		}
 
-}
+}*/
 
 void main()
 {
@@ -129,34 +129,34 @@ void main()
 	Delay300ms();
 	dir = MIDDLE;
 	
-	Oled_Init();
+	/*Oled_Init();
 	Oled_Clear();
-	Oled_Show_Str(2,2,"-----Ready----");
+	Oled_Show_Str(2,2,"-----Ready----");*/
 	
 	while(1){
 		//满足寻迹模式的条件
 		if(A25 == 0 && A26 == 1 && A27 == 1){
-			if(mark != XJ){
+			/*if(mark != XJ){
 				Oled_Clear();
 				Oled_Show_Str(2,2,"-----XunJi----");
-			}
+			}*/
 			mark = XJ;
 			xunjiMode();
 		}
 		//满足跟随模式的条件
 		if(A25 == 1 && A26 == 0 && A27 == 1){
-			if(mark != GS){
+			/*if(mark != GS){
 				Oled_Clear();
 				Oled_Show_Str(2,2,"-----GenSui----");
-			}
+			}*/
 			mark = GS;
 			gensuiMode();
 		}
 		//满足避障模式的条件
 		if(A25 == 1 && A26 == 1 && A27 == 0){
 			if(mark != BZ){
-				Oled_Clear();
-				Oled_Show_Str(2,2,"-----BiZhang----");
+				/*Oled_Clear();
+				Oled_Show_Str(2,2,"-----BiZhang----");*/
 			}
 			mark = BZ;
 			bizhangMode();
