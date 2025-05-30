@@ -6,8 +6,8 @@ sbit dsA = P0^5;//IN3=0,IN4=1  FORWARD
 sbit dsB = P0^4;
 sbit awA = P2^0;
 sbit awB = P2^1;
-sbit dwA = P3^5;
-sbit dwB = P3^4;
+sbit dwA = P3^4;
+sbit dwB = P3^5;
 sbit ENAas = P2^4;
 sbit ENAds = P2^5;
 sbit ENAaw = P2^6;
