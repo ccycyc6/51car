@@ -6,14 +6,13 @@ sbit ENALeftCon1 = P2^6;
 sbit ENARightCon1 = P2^7;
 sbit ENARightCon2 = P2^5;
 
-
 void delay(unsigned int z);
 void delay_us(unsigned int aa);
 
 void main(){
     while(1)
     {
-        unsigned int i, cycle=0, T = 1024; // 减少T到512（1/4）
+        unsigned int i, cycle, T = 1024; 
         goForward();
         for(i=0;i<100;i++) 
         {
@@ -33,7 +32,8 @@ void main(){
             ENARightCon2 = ~ENARightCon2;
         }
         goLeft();
-        while(cycle!=T) // T从2048减少到512
+        cycle = 0; // 修正：每次PWM循环前重置cycle
+        while(cycle != T)
         {
             ENALeftCon1 = 1;
             ENALeftCon2 = 1;
@@ -46,8 +46,9 @@ void main(){
             ENARightCon2 = 0;
             delay_us(T-cycle);
         }
-        goLeft();
-        while(cycle!=T) // T从2048减少到512
+        goRight(); // 修正：如需左转两次可改回goLeft()
+        cycle = 0; // 修正：重置cycle
+        while(cycle != T)
         {
             ENALeftCon1 = 1;
             ENALeftCon2 = 1;
