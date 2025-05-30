@@ -1,13 +1,13 @@
 #include <reg52.h>
 
-sbit asA = P1^0;//IN1=1,IN2=0  FORWARD
-sbit asB = P1^5;
-sbit dsA = P1^6;//IN3=0,IN4=1  FORWARD
-sbit dsB = P1^7;
+sbit asA = P1^0;//IN1=1,IN2=0  FORWARD       //P16 P17 is Feiwu Broken laji
+sbit asB = P1^1;
+sbit dsA = P0^5;//IN3=0,IN4=1  FORWARD
+sbit dsB = P0^4;
 sbit awA = P2^0;
 sbit awB = P2^1;
-sbit dwA = P2^2;
-sbit dwB = P2^3;
+sbit dwA = P3^5;
+sbit dwB = P3^4;
 sbit ENAas = P2^4;
 sbit ENAds = P2^5;
 sbit ENAaw = P2^6;
