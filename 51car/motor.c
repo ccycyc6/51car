@@ -17,7 +17,7 @@ void stopLeft()
 	LeftCon1A = 0;
 	LeftCon1B = 0;
 }
- 
+
 void goForwardRight()
 {
 	RightCon1A = 0;

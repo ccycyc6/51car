@@ -1,14 +1,11 @@
 #include "reg52.h"
 //这里定义1为前，2为后,A为1，B为0时前进89
-sbit RightCon1A = P3^5;
-sbit RightCon1B = P3^4;
-sbit RightCon2A = P0^4;
-sbit RightCon2B = P0^5;
-
-sbit LeftCon1A = P2^0;
-sbit LeftCon1B = P2^1;
-sbit LeftCon2A = P1^0;
-sbit LeftCon2B = P1^1;
+sbit IN1 = P1^0; 
+sbit IN2 = P1^1;
+sbit ENA = P1^2;
+sbit IN3 = P1^3;
+sbit IN4 = P1^4;
+sbit ENB = P1^5;
 
 /*sbit ENALeftCon2 = P2^4;
 sbit ENALeftCon1 = P2^6;
