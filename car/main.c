@@ -1,7 +1,7 @@
 #include "motor.h"
 #include "delay.h"
-#include "uart.h"
-#include "time.h"
+//#include "uart.h"
+#include "pwm.h"
 #include "reg52.h"
 extern char speedLeft;
 extern char speedRight;
