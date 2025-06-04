@@ -1,18 +1,18 @@
 #include <reg52.h>
 //#include "motor.h"
 
-sbit a1 = P1^0;     //
-sbit a2 = P1^1;
-sbit b1 = P1^2;
-sbit b2 = P1^3;
-sbit c1 = P1^4;
-sbit c2 = P1^5;
-sbit d1 = P1^6;
-sbit d2 = P1^7;
-sbit ENa = P2^0;
-sbit ENb = P2^1;
-sbit ENc = P2^2;
-sbit ENd = P2^3;
+sbit a1 = P2^7;     //
+sbit a2 = P2^6;
+sbit b1 = P2^4;
+sbit b2 = P2^3;
+sbit c1 = P2^1;
+sbit c2 = P2^0;
+sbit d1 = P3^5;
+sbit d2 = P3^4;
+sbit ENa = P2^5;
+sbit ENb = P2^2;
+sbit ENc = P3^6;                                                                                                                                                                                  
+sbit ENd = P3^3;
 
 void IN1(int i){
     if (i){
@@ -82,10 +82,10 @@ void ENB(int i){
 
 void main(){
     IN1(1);
+		ENA(1);
     IN2(1);
-    ENA(1);
     ENB(1);
+		IN3(1);
+		IN4(1);
 
 }
-
-
